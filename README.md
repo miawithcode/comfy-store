@@ -29,3 +29,11 @@ E-Commerce furniture store using React and Tailwind
       plugins: [require('@tailwindcss/typography'), require('daisyui')],
     }
     ```
+
+## Server Side / API
+
+1. [API Docs](https://documenter.getpostman.com/view/18152321/2s9Xy5KpTi)
+
+### Axios Custom Fetch
+
+1. 创建 `baseURL`
