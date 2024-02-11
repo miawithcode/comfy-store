@@ -1,10 +1,10 @@
 import { Outlet } from 'react-router-dom';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import { Header, Navbar, Footer } from '../components';
 
 const HomeLayout = () => {
   return (
     <>
+      <Header />
       <Navbar />
       <section className='section py-20'>
         <Outlet />
