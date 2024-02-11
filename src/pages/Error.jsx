@@ -15,7 +15,7 @@ const Error = () => {
             Sorry, the page you are looking for doesn't exist or has been moved.
           </p>
           <div className="mt-10">
-            <Link to="/" className="btn btn-secondary capitalize">
+            <Link to="/" className="btn btn-secondary uppercase">
               Take me home
             </Link>
           </div>

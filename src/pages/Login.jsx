@@ -3,7 +3,7 @@ import { FormInput, SubmitBtn } from '../components';
 
 const Login = () => {
   return (
-    <section className=" h-screen grid place-items-center">
+    <section className="h-screen grid place-items-center">
       <Form
         method="POST"
         className="card w-96 p-8 bg-base-100 shadow-lg flex flex-col gap-y-4"
@@ -16,6 +16,7 @@ const Login = () => {
           <SubmitBtn text="login" />
         </div>
 
+        <p className='text-gray-400 text-center uppercase'>—— or ——</p>
         <button type="button" className="btn btn-secondary btn-block uppercase">
           guest user
         </button>
