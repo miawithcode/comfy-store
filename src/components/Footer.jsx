@@ -1,6 +1,10 @@
 const Footer = () => {
   return (
-    <div>Footer</div>
-  )
-}
-export default Footer
+    <footer className="footer footer-center p-4 bg-base-300 text-base-content">
+      <aside>
+        <p>Copyright © {new Date().getFullYear()} - Made with 🩷 by Mia</p>
+      </aside>
+    </footer>
+  );
+};
+export default Footer;
