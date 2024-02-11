@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom"
+import { Outlet } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -6,9 +6,11 @@ const HomeLayout = () => {
   return (
     <>
       <Navbar />
-      <Outlet />
+      <section className='section py-20'>
+        <Outlet />
+      </section>
       <Footer />
     </>
-  )
-}
-export default HomeLayout
+  );
+};
+export default HomeLayout;
