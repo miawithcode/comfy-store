@@ -7,7 +7,7 @@ const Error = () => {
     return (
       <main className="grid min-h-screen place-items-center px-8">
         <div className="text-center">
-          <p className="text-9xl font-semibold text-primary">404</p>
+          <p className="text-9xl font-semibold text-secondary">404</p>
           <h1 className="mt-4 text-3xl font-bold sm:text-5xl capitalize">
             page not found
           </h1>
@@ -15,8 +15,8 @@ const Error = () => {
             Sorry, the page you are looking for doesn't exist or has been moved.
           </p>
           <div className="mt-10">
-            <Link to="/" className="btn btn-secondary uppercase">
-              Take me home
+            <Link to="/" className="btn btn-primary tracking-wide capitalize">
+              come back home
             </Link>
           </div>
         </div>
