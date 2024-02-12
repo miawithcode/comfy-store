@@ -9,9 +9,9 @@ const FeaturedProducts = () => {
         <SectionTitle title="featured products" desc="We offer best products" />
         <Link
           to="products"
-          className="btn btn-secondary text-base-100 tracking-wide capitalize self-end"
+          className="btn btn-primary tracking-wide capitalize self-end"
         >
-          View All Products
+          All Products
         </Link>
       </div>
       <ProductsGrid />
