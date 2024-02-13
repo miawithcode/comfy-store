@@ -16,7 +16,7 @@ const Login = () => {
           <SubmitBtn text="login" />
         </div>
 
-        <p className='text-gray-400 text-center uppercase'>—— or ——</p>
+        <p className='text-gray-400 text-center uppercase divider'>or</p>
         <button type="button" className="btn btn-secondary btn-block uppercase">
           guest user
         </button>
