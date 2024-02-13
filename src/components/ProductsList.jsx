@@ -20,7 +20,7 @@ const ProductsList = () => {
               alt={title}
               className="rounded-lg h-24 w-24 md:h-32 sm:w-32 object-cover group-hover:scale-105 transition duration-300"
             />
-            <div className="ml-0 sm:ml-16 h-full flex flex-col justify-between">
+            <div className="ml-0 sm:ml-16 flex flex-col justify-between">
               <div>
                 <h3 className="capitalize font-medium text-lg">{title}</h3>
                 <h4 className="capitalize text-md text-gray-500">{company}</h4>
@@ -29,7 +29,7 @@ const ProductsList = () => {
                 {category}
               </div>
             </div>
-            <p className="font-medium ml-default sm:ml-auto text-lg">
+            <p className="font-medium ml-default sm:ml-auto text-lg text-secondary">
               {dollarsAmount}
             </p>
           </Link>
