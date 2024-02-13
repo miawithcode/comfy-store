@@ -1,6 +1,6 @@
 export { default as FormInput } from './FormInput';
 export { default as SubmitBtn } from './SubmitBtn';
-export { default as Loader } from './Loader';
+export { default as Loading } from './Loading';
 export { default as Header } from './Header';
 export { default as Navbar } from './Navbar';
 export { default as Footer } from './Footer';
@@ -14,3 +14,4 @@ export { default as PaginationContainer } from './PaginationContainer';
 export { default as FormSelect } from './FormSelect';
 export { default as FormRange } from './FormRange';
 export { default as FormCheckbox } from './FormCheckbox';
+export { default as GlobalLoading } from './GlobalLoading';

@@ -1,5 +1,5 @@
 import { useNavigation } from 'react-router-dom';
-import Loader from './Loader';
+import Loading from './Loading';
 
 const SubmitBtn = ({ text }) => {
   const navigation = useNavigation();
@@ -11,7 +11,7 @@ const SubmitBtn = ({ text }) => {
       className="btn btn-primary btn-block uppercase"
       disabled={isSubmitting}
     >
-      {isSubmitting ? <Loader text="login..." /> : text || 'login'}
+      {isSubmitting ? <Loading text="login..." /> : text || 'login'}
     </button>
   );
 };
