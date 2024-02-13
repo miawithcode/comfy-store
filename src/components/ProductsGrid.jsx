@@ -30,7 +30,7 @@ const ProductsGrid = () => {
                 <div className="text-secondary">{dollarsAmount}</div>
               </div>
               <p className="text-gray-500 self-start">{company}</p>
-              <div className="badge badge-neutral text-base-100 p-3 self-start">
+              <div className="badge badge-neutral text-neutral-content p-3 self-start">
                 {category}
               </div>
             </div>

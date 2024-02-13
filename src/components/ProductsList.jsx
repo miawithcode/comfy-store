@@ -25,7 +25,7 @@ const ProductsList = () => {
                 <h3 className="capitalize font-medium text-lg">{title}</h3>
                 <h4 className="capitalize text-md text-gray-500">{company}</h4>
               </div>
-              <div className="badge badge-neutral text-base-100 p-3">
+              <div className="badge badge-neutral text-neutral-content p-3">
                 {category}
               </div>
             </div>
