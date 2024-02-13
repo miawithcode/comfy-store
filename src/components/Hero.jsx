@@ -10,14 +10,17 @@ const Hero = () => {
   return (
     <div className="grid lg:grid-cols-2 gap-24 items-center">
       <div>
-        <h1 className="max-w-2xl text-4xl font-bold tracking-wide sm:text-6xl capitalize">
-          Make your home comfy paradise
+        <h1 className="max-w-2xl text-4xl font-bold tracking-wide text-balance sm:text-6xl">
+          Make your home the comfy paradise
         </h1>
-        <p className='mt-8 max-w-xl text-lg leading-8'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ipsa tempora debitis, aliquam, hic eveniet nisi ad deserunt illum voluptates officia dolores, odit animi aliquid nostrum deleniti id eos. In!
+        <p className="mt-8 max-w-xl text-lg leading-8">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ipsa
+          tempora debitis, aliquam, hic eveniet nisi ad deserunt illum
+          voluptates officia dolores, odit animi aliquid nostrum deleniti id
+          eos. In!
         </p>
-        <div className='mt-10'>
-          <Link to="/products" className='btn btn-primary'>
+        <div className="mt-10">
+          <Link to="/products" className="btn btn-primary">
             Our Products
           </Link>
         </div>
