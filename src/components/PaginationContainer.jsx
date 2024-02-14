@@ -1,15 +1,21 @@
+import { useState } from 'react';
 import { useLoaderData, useLocation, useNavigate } from 'react-router-dom';
 
 const PaginationContainer = () => {
   const { meta } = useLoaderData();
-  const { pageCount, page, total } = meta.pagination;
+  const { pageCount, page } = meta.pagination;
 
   const pages = Array.from({ length: pageCount }, (_, index) => {
     return index + 1;
   });
 
+  const { search, pathname } = useLocation();
+  const navigate = useNavigate();
+
   const handlePageChange = (pageNumber) => {
-    console.log(pageNumber);
+    const searchParams = new URLSearchParams(search);
+    searchParams.set('page', pageNumber);
+    navigate(`${pathname}?${searchParams.toString()}`);
   };
 
   if (pageCount < 2) return null;
@@ -18,10 +24,13 @@ const PaginationContainer = () => {
     <div className="mt-16 flex justify-center">
       <div className="join">
         <button
-          className="btn btn-xs sm:btn-md join-item"
+          className="join-item btn btn-xs sm:btn-md"
           onClick={() => {
-            handlePageChange('prev');
+            if (page > 1) {
+              handlePageChange(page - 1);
+            }
           }}
+          disabled={page <= 1}
         >
           Prev
         </button>
@@ -30,8 +39,8 @@ const PaginationContainer = () => {
             <button
               key={pageNumber}
               onClick={() => handlePageChange(pageNumber)}
-              className={`btn btn-xs sm:btn-md border-none join-item ${
-                pageNumber === page ? 'bg-base-300 border-base-300' : ''
+              className={`join-item btn btn-xs sm:btn-md ${
+                pageNumber === page && 'btn-active'
               }`}
             >
               {pageNumber}
@@ -39,10 +48,13 @@ const PaginationContainer = () => {
           );
         })}
         <button
-          className="btn btn-xs sm:btn-md join-item"
+          className="join-item btn btn-xs sm:btn-md"
           onClick={() => {
-            handlePageChange('next');
+            if (page < pageCount) {
+              handlePageChange(page + 1);
+            }
           }}
+          disabled={page >= pageCount}
         >
           Next
         </button>
