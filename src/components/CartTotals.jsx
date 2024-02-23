@@ -1,6 +1,39 @@
+import { useSelector } from 'react-redux';
+import { formatPrice } from '../utils';
+
 const CartTotals = () => {
+  const { cartTotal, shipping, tax, orderTotal } = useSelector(
+    (state) => state.cartState
+  );
+
   return (
-    <h2 className="text-3xl">Cart</h2>
-  )
-}
-export default CartTotals
+    <div className="card bg-base-200">
+      <div className="card-body">
+        {/* CART TOTAL */}
+        <p className="flex justify-between text-xs border-b border-base-300 pb-2">
+          <span className="capitalize">Cart Total</span>
+          <span className="font-medium">{formatPrice(cartTotal)}</span>
+        </p>
+
+        {/* SHIPPING */}
+        <p className="flex justify-between text-xs border-b border-base-300 pb-2">
+          <span className="capitalize">Shipping</span>
+          <span className="font-medium">{formatPrice(shipping)}</span>
+        </p>
+
+        {/* TAX */}
+        <p className="flex justify-between text-xs border-b border-base-300 pb-2">
+          <span className="capitalize">Tax</span>
+          <span className="font-medium">{formatPrice(tax)}</span>
+        </p>
+
+        {/* ORDER TOTAL */}
+        <p className="flex justify-between text-sm mt-4 pb-2">
+          <span className="capitalize">Order Total</span>
+          <span className="font-medium">{formatPrice(orderTotal)}</span>
+        </p>
+      </div>
+    </div>
+  );
+};
+export default CartTotals;
