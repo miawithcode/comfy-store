@@ -8,7 +8,7 @@ const Cart = () => {
   const numItemsInCart = useSelector((state) => state.cartState.numItemsInCart);
 
   if (numItemsInCart === 0) {
-    return <h2>Your cart is currently empty</h2>;
+    return <h2 className='text-3xl tracking-wide font-medium'>Your cart is currently empty</h2>;
   }
 
   return (

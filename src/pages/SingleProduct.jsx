@@ -23,7 +23,7 @@ const SingleProduct = () => {
   };
 
   const cartProduct = {
-    cartId: product.id + productColor,
+    cartID: product.id + productColor,
     productId: product.id,
     image,
     title,
