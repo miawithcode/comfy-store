@@ -1,10 +1,31 @@
-import { Form, Link } from 'react-router-dom';
+import { Form, Link, redirect } from 'react-router-dom';
 import { FormInput, SubmitBtn } from '../components';
+import { customFetch } from '../utils';
+import toast from 'react-hot-toast';
+import { loginUser } from '../features/user/userSlice';
+import { useDispatch } from 'react-redux';
 
-export const action = (store) => async () => {
-  console.log(store);
-  return null;
-}
+const url = '/auth/local';
+
+export const action =
+  (store) =>
+  async ({ request }) => {
+    const formData = await request.formData();
+    const data = Object.fromEntries(formData);
+
+    try {
+      const response = await customFetch.post(url, data);
+      store.dispatch(loginUser(response.data));
+      toast.success('logged in successfully');
+      return redirect('/');
+    } catch (error) {
+      const errorMessage =
+        error?.response?.data?.error?.message ||
+        'please double check your credentials';
+      toast.error(errorMessage);
+      return null;
+    }
+  };
 
 const Login = () => {
   return (
@@ -21,8 +42,11 @@ const Login = () => {
           <SubmitBtn text="login" />
         </div>
 
-        <p className='text-gray-400 text-center uppercase divider'>or</p>
-        <button type="button" className="btn btn-secondary btn-block uppercase">
+        <p className="text-gray-400 text-center uppercase divider">or</p>
+        <button
+          type="button"
+          className="btn btn-secondary btn-block capitalize"
+        >
           guest user
         </button>
         <p className="text-center">
