@@ -1,4 +1,4 @@
-const Loader = ({ text }) => {
-  return <span className="loading loading-spinner loading-xs">{text}</span>;
+const Loading = () => {
+  return <span className="loading loading-spinner loading-xs"></span>;
 };
-export default Loader;
+export default Loading;

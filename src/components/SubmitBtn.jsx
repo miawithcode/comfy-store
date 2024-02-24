@@ -8,10 +8,17 @@ const SubmitBtn = ({ text }) => {
   return (
     <button
       type="submit"
-      className="btn btn-primary btn-block uppercase"
+      className="btn btn-primary btn-block capitalize"
       disabled={isSubmitting}
     >
-      {isSubmitting ? <Loading text="login..." /> : text || 'login'}
+      {isSubmitting ? (
+        <>
+          <Loading />
+          {text}...
+        </>
+      ) : (
+        text || 'submit'
+      )}
     </button>
   );
 };
