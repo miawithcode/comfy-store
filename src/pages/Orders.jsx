@@ -1,7 +1,7 @@
 import toast from 'react-hot-toast';
 import { redirect, useLoaderData } from 'react-router-dom';
 import { customFetch } from '../utils';
-import { OrdersList, PaginationContainer } from '../components';
+import { OrdersList, ComplexPaginationContainer } from '../components';
 
 const url = '/orders';
 
@@ -52,7 +52,7 @@ const Orders = () => {
     <>
       <h2 className="text-3xl font-bold text-center">Your Orders</h2>
       <OrdersList />
-      <PaginationContainer />
+      <ComplexPaginationContainer />
     </>
   );
 };
