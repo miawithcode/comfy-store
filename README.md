@@ -4,6 +4,13 @@ E-Commerce furniture store using React and Tailwind.
 
 功能包括：登录、注册、查询商品、筛选商品、添加购物车、下订单、结算和夜间模式。
 
+<div align="center">
+  <img src="./public/screenshot.png" />
+  <a href="https://comfy-store-seven.vercel.app/">Demo</a>
+
+</div>
+
+
 ## Setup DaisyUI
 
 1. 安装 DaisyUI
