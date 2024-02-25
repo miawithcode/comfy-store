@@ -1,21 +1,8 @@
 # Comfy Store
 
 E-Commerce furniture store using React and Tailwind.
+
 功能包括：登录、注册、查询商品、筛选商品、添加购物车、下订单、结算和夜间模式。
-
-## Used Tools
-
-- React Router
-- React Query
-- Axios
-- Redux Toolkit
-- DaisyUI
-
-## Covering
-
-- 设置服务器（Setup Server）
-- 分页（Pagination）
-- filter
 
 ## Setup DaisyUI
 
