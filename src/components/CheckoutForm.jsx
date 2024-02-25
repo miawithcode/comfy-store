@@ -1,6 +1,24 @@
+import { Form } from 'react-router-dom';
+import FormInput from './FormInput';
+import SubmitBtn from './SubmitBtn';
+
+export const action = (store) => async () => {
+  console.log(store);
+  return null;
+};
+
 const CheckoutForm = () => {
   return (
-    <div>CheckoutForm</div>
-  )
-}
-export default CheckoutForm
+    <Form method="POST" className="flex flex-col gap-y-4">
+      <h4 className="font-medium text-xl capitalize tracking-wide">
+        shipping infomation
+      </h4>
+      <FormInput label="first name" name="name" type="text" />
+      <FormInput label="address" name="address" type="text" />
+      <div>
+        <SubmitBtn text="place your order" />
+      </div>
+    </Form>
+  );
+};
+export default CheckoutForm;
