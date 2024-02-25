@@ -17,3 +17,4 @@ export { default as FormCheckbox } from './FormCheckbox';
 export { default as GlobalLoading } from './GlobalLoading';
 export { default as CartTotals } from './CartTotals';
 export { default as CartItemsList } from './CartItemsList';
+export { default as CheckoutForm } from './CheckoutForm';
