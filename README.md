@@ -22,3 +22,7 @@ E-Commerce furniture store using React and Tailwind.
 
 1. [API Docs](https://documenter.getpostman.com/view/18152321/2s9Xy5KpTi)
 2. 用 Thunder Client 插件测试是否能获取到数据
+
+## React Query
+
+the approach of using React Query only in loaders
