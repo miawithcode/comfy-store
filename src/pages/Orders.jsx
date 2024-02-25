@@ -40,6 +40,20 @@ export const loader =
   };
 
 const Orders = () => {
-  return <div>Orders</div>;
+  const {meta} = useLoaderData();
+  if(meta.pagination.total < 1) {
+    return (
+      <h2 className="text-3xl tracking-wide font-medium">
+        You haven't make any orders yet
+      </h2>
+    );
+  }
+  return (
+    <>
+      <h2 className="text-3xl font-bold text-center">Your Orders</h2>
+      <OrdersList />
+      <PaginationContainer />
+    </>
+  );
 };
 export default Orders;
